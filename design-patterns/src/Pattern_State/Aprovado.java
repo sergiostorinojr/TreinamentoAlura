@@ -1,34 +1,35 @@
+package Pattern_State;
 /**
  * 
  * design-patterns
  * @author Sérgio Junior - sergio.storinojr@gmail.com
- * 17/01/2016 - 18:13:57
+ * 17/01/2016 - 18:13:37
  *
  * Pattern State
  *
  */
-public class Reprovado implements EstadoDeUmOrcamento{
+public class Aprovado implements EstadoDeUmOrcamento {
 
-	@Override
 	public void aplicaDescontoExtra(Orcamento orcamento) {
-		throw new RuntimeException("Orcamento reprovados não podem receber desconto Extra");
-		
+		orcamento.valor -= orcamento.valor * 0.02;
 	}
 
 	@Override
 	public void aprovado(Orcamento orcamento) {
-		throw new RuntimeException("Orçamentos reprovados não podem ser Aprovado");
+		throw new RuntimeException("Orçamento já AProvado");
+
 	}
 
 	@Override
 	public void reprovado(Orcamento orcamento) {
-		throw new RuntimeException("Orçamento já se encontra Reprovado");
+		throw new RuntimeException(
+				"Orçamento uma vez Aprovado não pode Ser Reprovado");
+
 	}
 
 	@Override
 	public void finaliza(Orcamento orcamento) {
 		orcamento.estadoAtual = new Finalizado();
-		
 	}
 
 }
