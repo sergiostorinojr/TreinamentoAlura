@@ -1,4 +1,4 @@
-package Patterns_Template_Method;
+package Pattern_Template_Method;
 
 
 
