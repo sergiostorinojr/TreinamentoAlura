@@ -3,7 +3,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
+/**
+ * 
+ * design-patterns
+ * @author Sérgio Junior - sergio.storinojr@gmail.com
+ * 19/01/2016 - 20:32:29
+ *
+ * Pattern Factory
+ *
+ */
 public class ConnectionFactory {
 	
 	public Connection getConnection(){

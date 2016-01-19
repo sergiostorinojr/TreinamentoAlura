@@ -4,7 +4,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
+/**
+ * 
+ * design-patterns
+ * @author Sérgio Junior - sergio.storinojr@gmail.com
+ * 19/01/2016 - 20:32:42
+ *
+ * Pattern Factory
+ *
+ */
 public class Programa {
 
 	public static void main(String[] args) {
